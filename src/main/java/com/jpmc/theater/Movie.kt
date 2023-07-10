@@ -13,74 +13,61 @@ data class Movie(
     val ticketPrice: Double,
     val specialCode: Int
 ) {
-    private val description: String? = null
-
-
-    override fun equals(o: Any?): Boolean {
-        if (this === o) return true
-        if (o == null || javaClass != o.javaClass) return false
-        val movie = o as Movie
-        return java.lang.Double.compare(
-            movie.ticketPrice,
-            ticketPrice
-        ) == 0 && title == movie.title && description == movie.description && runningTime == movie.runningTime && specialCode == movie.specialCode
-    }
-
-    override fun hashCode(): Int {
-        return Objects.hash(title, description, runningTime, ticketPrice, specialCode)
-    }
 
     companion object {
         const val MOVIE_CODE_SPECIAL = 1
     }
 }
 
-fun Showing.calculateTicketPrice(): Double {
-    return movie.ticketPrice - getDiscount(movie)
-}
+fun Showing.calculateTicketPrice() = movie.ticketPrice - biggestDiscount()
 
-private fun Showing.getDiscount(movie: Movie): Double {
-    val specialDiscount = movie.calculateSpecialDiscount()
-
-    val matineeDiscount = calculateMatineeDiscount()
-
-    val sequenceDiscount = sequenceDiscount()
-
-    return listOf(
-        specialDiscount,
-        matineeDiscount,
-        sequenceDiscount
-    ).max()
-}
+private fun Showing.biggestDiscount() = listOfNotNull(
+    specialDiscount(),
+    matineeDiscount(),
+    firstShowDiscount(),
+    secondShowDiscount(),
+    luckyDayDiscount(),
+).maxOrNull() ?: 0.0
 
 private val matineeBegin = LocalTime.of(11, 0)
 private val matineeEnd = LocalTime.of(16, 0)
 
-fun Showing.calculateMatineeDiscount() = if (
-    startTime.toLocalTime().shouldApplyMatineeDiscount()
-) {
-    movie.ticketPrice * 0.25
+fun discount(rule: () -> Boolean, discount: () -> Double) = if (rule()) {
+    discount()
 } else {
-    0.0
+    null
 }
 
-private fun LocalTime.shouldApplyMatineeDiscount(): Boolean {
-    return this == matineeBegin
-            || this == matineeEnd
-            || (this.isBetween(matineeBegin, matineeEnd))
-}
+fun Showing.luckyDayDiscount() = discount(
+    rule = ::isLuckyDay,
+    discount = { 1.0 }
+)
+
+private fun Showing.isLuckyDay() = startTime.toLocalDate().dayOfMonth == 7
+
+fun Showing.matineeDiscount() = discount(
+    rule = startTime.toLocalTime()::shouldApplyMatineeDiscount,
+    discount = { movie.ticketPrice * 0.25 }
+)
+
+private fun LocalTime.shouldApplyMatineeDiscount() = this == matineeBegin
+        || this == matineeEnd
+        || (this.isBetween(matineeBegin, matineeEnd))
 
 private fun LocalTime.isBetween(localTime: LocalTime?, localTime1: LocalTime?) =
     isAfter(localTime) && isBefore(localTime1)
 
-private fun Showing.sequenceDiscount(): Double = when (sequenceOfTheDay) {
-    1 -> 3.0
-    2 -> 2.0
-    else -> 0.0
-}
+private fun Showing.firstShowDiscount() = discount(
+    rule = { sequenceOfTheDay == 1 },
+    discount = { 3.0 }
+)
 
-private fun Movie.calculateSpecialDiscount() = if (Movie.MOVIE_CODE_SPECIAL == specialCode) {
-    ticketPrice * 20.percent
-} else {
-    0.0
-}
+private fun Showing.secondShowDiscount() = discount(
+    rule = { sequenceOfTheDay == 2 },
+    discount = { 2.0 }
+)
+
+private fun Showing.specialDiscount() = discount(
+    rule = { Movie.MOVIE_CODE_SPECIAL == movie.specialCode },
+    discount = { movie.ticketPrice * 20.percent }
+)

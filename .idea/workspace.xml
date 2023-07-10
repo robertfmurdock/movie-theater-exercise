@@ -49,7 +49,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.theater in movie-theater">
+  <component name="RunManager" selected="JUnit.MovieTests">
     <configuration name="LocalDateProviderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
@@ -136,10 +136,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieTests" />
         <item itemvalue="JUnit.theater in movie-theater" />
         <item itemvalue="JUnit.LocalDateProviderTests" />
         <item itemvalue="Maven.movie-theater [test]" />
-        <item itemvalue="JUnit.MovieTests" />
         <item itemvalue="JUnit.com.jpmc.theater in movie-theater" />
       </list>
     </recent_temporary>
