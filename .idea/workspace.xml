@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63dbb46a-9a0b-49f5-bba4-ebc77f6f7f1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/LocalDateProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/LocalDateProviderTests.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/LocalDateProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/LocalDateProviderTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689016566318</updated>
-      <workItem from="1689016567574" duration="640000" />
+      <workItem from="1689016567574" duration="1357000" />
     </task>
     <servers />
   </component>
