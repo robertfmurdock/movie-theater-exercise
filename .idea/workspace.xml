@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="63dbb46a-9a0b-49f5-bba4-ebc77f6f7f1b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +48,11 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3130129",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MovieTests">
+  <component name="RunManager" selected="JUnit.TheaterTests">
     <configuration name="LocalDateProviderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
@@ -80,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.jpmc.theater in movie-theater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TheaterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
         <pattern>
@@ -89,7 +92,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jpmc.theater" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.TheaterTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,45 +106,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="movie-theater [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="test" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="TheaterKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.TheaterKt" />
+      <module name="movie-theater" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="JUnit.LocalDateProviderTests" />
+      <item itemvalue="JUnit.TheaterTests" />
       <item itemvalue="JUnit.theater in movie-theater" />
       <item itemvalue="JUnit.MovieTests" />
-      <item itemvalue="JUnit.com.jpmc.theater in movie-theater" />
-      <item itemvalue="Maven.movie-theater [test]" />
+      <item itemvalue="Kotlin.TheaterKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TheaterTests" />
+        <item itemvalue="Kotlin.TheaterKt" />
         <item itemvalue="JUnit.MovieTests" />
         <item itemvalue="JUnit.theater in movie-theater" />
         <item itemvalue="JUnit.LocalDateProviderTests" />
-        <item itemvalue="Maven.movie-theater [test]" />
-        <item itemvalue="JUnit.com.jpmc.theater in movie-theater" />
       </list>
     </recent_temporary>
   </component>
