@@ -27,7 +27,7 @@ class MovieTests {
     @Test
     fun ticketPriceForRegularMoveHasNoDiscount() {
         val spiderMan = Movie(
-            title = "Spider-Man: No Way Home",
+            title = "Spider-Man: Beyond the Spiderverse",
             runningTime = Duration.ofMinutes(90),
             ticketPrice = 12.5,
             specialCode = 0
@@ -43,7 +43,7 @@ class MovieTests {
     @Test
     fun ticketPriceForRegularMoveFirstShowingReducedBy3() {
         val spiderMan = Movie(
-            title = "Spider-Man: No Way Home",
+            title = "Spider-Man: Homecoming",
             runningTime = Duration.ofMinutes(90),
             ticketPrice = 12.5,
             specialCode = 0
@@ -59,7 +59,7 @@ class MovieTests {
     @Test
     fun ticketPriceForRegularMoveSecondShowingReducedBy2() {
         val spiderMan = Movie(
-            title = "Spider-Man: No Way Home",
+            title = "Spider-Man: Into the Spiderverse",
             runningTime = Duration.ofMinutes(90),
             ticketPrice = 12.5,
             specialCode = 0
@@ -70,5 +70,22 @@ class MovieTests {
             startTime = LocalDateTime.of(LocalDate.now(), LocalTime.now())
         )
         assertEquals(spiderMan.ticketPrice - 2, showing.calculateTicketPrice())
+    }
+
+
+    @Test
+    fun ticketPriceForMatineeGets25PercentDiscount() {
+        val spiderMan = Movie(
+            title = "Spider-Man: Into the Spiderverse",
+            runningTime = Duration.ofMinutes(90),
+            ticketPrice = 100.0,
+            specialCode = 0
+        )
+        val showing = Showing(
+            movie = spiderMan,
+            sequenceOfTheDay = 7,
+            startTime = LocalDateTime.of(LocalDate.now(), LocalTime.now())
+        )
+        assertEquals(75.0, showing.calculateTicketPrice())
     }
 }
