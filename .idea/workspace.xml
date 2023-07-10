@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63dbb46a-9a0b-49f5-bba4-ebc77f6f7f1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/CalculateTicketPrice.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/HumanReadableDuration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/HumanReadableShowingDescription.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/JsonSchedule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/PrintSchedule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/discount/LuckyDayDiscount.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/discount/MatineeDiscount.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/discount/SequenceDiscount.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/discount/SpecialDiscount.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,22 +69,15 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.TheaterKt">
-    <configuration name="LocalDateProviderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="movie-theater" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jpmc.theater.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
-      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.LocalDateProviderTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/jpmc/theater/discount" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.jpmc.theater" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TheaterTests">
     <configuration name="MovieTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
@@ -99,10 +108,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="theater in movie-theater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in movie-theater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/com/jpmc/theater" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.MainKt" />
+      <module name="movie-theater" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,19 +133,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LocalDateProviderTests" />
+      <item itemvalue="JUnit.java in movie-theater" />
       <item itemvalue="JUnit.TheaterTests" />
-      <item itemvalue="JUnit.theater in movie-theater" />
       <item itemvalue="JUnit.MovieTests" />
+      <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.TheaterKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.TheaterKt" />
         <item itemvalue="JUnit.TheaterTests" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.java in movie-theater" />
+        <item itemvalue="Kotlin.TheaterKt" />
         <item itemvalue="JUnit.MovieTests" />
-        <item itemvalue="JUnit.theater in movie-theater" />
-        <item itemvalue="JUnit.LocalDateProviderTests" />
       </list>
     </recent_temporary>
   </component>

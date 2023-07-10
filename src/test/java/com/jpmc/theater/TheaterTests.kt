@@ -1,11 +1,11 @@
 package com.jpmc.theater
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 class TheaterTests {
+    
     @Test
     fun totalFeeForCustomer() {
         val theater = Theater(LocalDateProvider.singleton)
