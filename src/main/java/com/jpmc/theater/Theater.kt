@@ -47,25 +47,28 @@ class Theater(private val provider: LocalDateProvider) {
 
     private val mapper = ObjectMapper()
 
-    fun jsonSchedule(): String {
-        return mapper.writeValueAsString(mapOf(
-            "currentDate" to "${provider.currentDate()}",
-            "schedule" to schedule.map {
-                mapOf(
-                    "listing" to it.sequenceOfTheDay,
-                    "startTime" to "${it.startTime.toLocalTime()}",
-                    "title" to it.movie.title,
-                    "runningTime" to humanReadableFormat(it.movie.runningTime),
-                    "ticketPrice" to it.movie.ticketPrice,
-                )
-            }
-        ))
-    }
+    fun jsonSchedule() = mapper.writeValueAsString(mapOf(
+        "currentDate" to "${provider.currentDate()}",
+        "schedule" to schedule.map {
+            mapOf(
+                "listing" to it.sequenceOfTheDay,
+                "startTime" to "${it.startTime.toLocalTime()}",
+                "title" to it.movie.title,
+                "runningTime" to humanReadableFormat(it.movie.runningTime),
+                "ticketPrice" to it.movie.ticketPrice,
+            )
+        }
+    ))
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val theater = Theater(singleton)
-    theater.printSchedule()
+
+    if (args.contains("--json")) {
+        println(theater.jsonSchedule())
+    } else {
+        theater.printSchedule()
+    }
 }
 
 fun Showing.humanReadableShowingDescription() =
