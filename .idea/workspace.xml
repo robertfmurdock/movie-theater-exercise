@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63dbb46a-9a0b-49f5-bba4-ebc77f6f7f1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +42,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3130129",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MovieTests">
-    <configuration name="Theater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.Theater" />
+  <component name="RunManager" selected="JUnit.theater in movie-theater">
+    <configuration name="LocalDateProviderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
         <pattern>
@@ -56,6 +58,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.LocalDateProviderTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +94,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="theater in movie-theater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-theater" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/jpmc/theater" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="movie-theater [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -115,17 +128,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Theater" />
+      <item itemvalue="JUnit.LocalDateProviderTests" />
+      <item itemvalue="JUnit.theater in movie-theater" />
       <item itemvalue="JUnit.MovieTests" />
       <item itemvalue="JUnit.com.jpmc.theater in movie-theater" />
       <item itemvalue="Maven.movie-theater [test]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.theater in movie-theater" />
+        <item itemvalue="JUnit.LocalDateProviderTests" />
         <item itemvalue="Maven.movie-theater [test]" />
         <item itemvalue="JUnit.MovieTests" />
         <item itemvalue="JUnit.com.jpmc.theater in movie-theater" />
-        <item itemvalue="Application.Theater" />
       </list>
     </recent_temporary>
   </component>

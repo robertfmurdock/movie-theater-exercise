@@ -1,7 +1,11 @@
 package com.jpmc.theater
 
 import java.time.Duration
+import java.time.LocalTime
 import java.util.*
+
+private val Int.percent: Double
+    get() = this / 100.0
 
 data class Movie(
     val title: String,
@@ -32,24 +36,51 @@ data class Movie(
 }
 
 fun Showing.calculateTicketPrice(): Double {
-    return movie.ticketPrice - movie.getDiscount(sequenceOfTheDay)
+    return movie.ticketPrice - getDiscount(movie)
 }
 
-private fun Movie.getDiscount(showSequence: Int): Double {
-    var specialDiscount = 0.0
-    if (Movie.MOVIE_CODE_SPECIAL == specialCode) {
-        specialDiscount = ticketPrice * 0.2 // 20% discount for special movie
-    }
-    var sequenceDiscount = 0.0
-    if (showSequence == 1) {
-        sequenceDiscount = 3.0 // $3 discount for 1st show
-    } else if (showSequence == 2) {
-        sequenceDiscount = 2.0 // $2 discount for 2nd show
-    }
-    //        else {
-//            throw new IllegalArgumentException("failed exception");
-//        }
+private fun Showing.getDiscount(movie: Movie): Double {
+    val specialDiscount = movie.calculateSpecialDiscount()
 
-    // biggest discount wins
-    return if (specialDiscount > sequenceDiscount) specialDiscount else sequenceDiscount
+    val matineeDiscount = calculateMatineeDiscount()
+
+    val sequenceDiscount = sequenceDiscount()
+
+    return listOf(
+        specialDiscount,
+        matineeDiscount,
+        sequenceDiscount
+    ).max()
+}
+
+private val matineeBegin = LocalTime.of(11, 0)
+private val matineeEnd = LocalTime.of(16, 0)
+
+fun Showing.calculateMatineeDiscount() = if (
+    startTime.toLocalTime().shouldApplyMatineeDiscount()
+) {
+    movie.ticketPrice * 0.25
+} else {
+    0.0
+}
+
+private fun LocalTime.shouldApplyMatineeDiscount(): Boolean {
+    return this == matineeBegin
+            || this == matineeEnd
+            || (this.isBetween(matineeBegin, matineeEnd))
+}
+
+private fun LocalTime.isBetween(localTime: LocalTime?, localTime1: LocalTime?) =
+    isAfter(localTime) && isBefore(localTime1)
+
+private fun Showing.sequenceDiscount(): Double = when (sequenceOfTheDay) {
+    1 -> 3.0
+    2 -> 2.0
+    else -> 0.0
+}
+
+private fun Movie.calculateSpecialDiscount() = if (Movie.MOVIE_CODE_SPECIAL == specialCode) {
+    ticketPrice * 20.percent
+} else {
+    0.0
 }

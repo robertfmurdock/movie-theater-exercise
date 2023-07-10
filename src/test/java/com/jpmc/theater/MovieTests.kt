@@ -66,7 +66,7 @@ class MovieTests {
         )
         val showing = Showing(
             movie = spiderMan,
-            sequenceOfTheDay = 1,
+            sequenceOfTheDay = 2,
             startTime = LocalDateTime.of(LocalDate.now(), LocalTime.now())
         )
         assertEquals(spiderMan.ticketPrice - 2, showing.calculateTicketPrice())
@@ -74,7 +74,7 @@ class MovieTests {
 
 
     @Test
-    fun ticketPriceForMatineeGets25PercentDiscount() {
+    fun ticketPriceForMatineeUpperBoundGets25PercentDiscount() {
         val spiderMan = Movie(
             title = "Spider-Man: Into the Spiderverse",
             runningTime = Duration.ofMinutes(90),
@@ -84,7 +84,39 @@ class MovieTests {
         val showing = Showing(
             movie = spiderMan,
             sequenceOfTheDay = 7,
-            startTime = LocalDateTime.of(LocalDate.now(), LocalTime.now())
+            startTime = LocalDateTime.of(LocalDate.now(), LocalTime.of(11, 0))
+        )
+        assertEquals(75.0, showing.calculateTicketPrice())
+    }
+
+    @Test
+    fun ticketPriceForMatineeLowerBoundGets25PercentDiscount() {
+        val spiderMan = Movie(
+            title = "Spider-Man: Into the Spiderverse",
+            runningTime = Duration.ofMinutes(90),
+            ticketPrice = 100.0,
+            specialCode = 0
+        )
+        val showing = Showing(
+            movie = spiderMan,
+            sequenceOfTheDay = 7,
+            startTime = LocalDateTime.of(LocalDate.now(), LocalTime.of(16, 0))
+        )
+        assertEquals(75.0, showing.calculateTicketPrice())
+    }
+
+    @Test
+    fun ticketPriceForMatineeMiddleGets25PercentDiscount() {
+        val spiderMan = Movie(
+            title = "Spider-Man: Into the Spiderverse",
+            runningTime = Duration.ofMinutes(90),
+            ticketPrice = 100.0,
+            specialCode = 0
+        )
+        val showing = Showing(
+            movie = spiderMan,
+            sequenceOfTheDay = 7,
+            startTime = LocalDateTime.of(LocalDate.now(), LocalTime.of(12, 0))
         )
         assertEquals(75.0, showing.calculateTicketPrice())
     }
